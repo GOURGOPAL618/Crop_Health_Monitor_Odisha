@@ -26,6 +26,56 @@ In large-scale agricultural risk management (such as solutions deployed by SatSu
 By analyzing high-frequency temporal spectral signatures, the system intercepts hidden agronomic stress vectors (droughts, pest outbreaks, or flash floods) up to **3-4 weeks before physical degradation becomes visible to the naked eye**.
 
 ---
+## 🏗️ System Architecture & Mission Pipeline
+[🛰️ ESA Sentinel-2 Constellation]
+│
+▼
+[🛠️ GEE Cloud-Masking & QA60 Bit-Extraction]
+│
+▼
+[📊 Radiometric Transformation: NDVI / NDWI Extraction]
+│
+▼
+[🤖 Statistical Engine: μ ± 2σ Dynamic Thresholding] ──> [Notebook 01: Active]
+│
+▼
+[🧠 Predictive Engine: Deep Learning LSTM Error Modeling] ──> [Notebook 03: Planned]
+│
+▼
+[🚨 Downstream Alert Payload: Automated Risk Mitigation Report]
 
+text
+
+---
+
+## 📍 Mission Parameters & Target Profile
+
+- **Satellite Constellation:** Copernicus Sentinel-2 (Level-2A Surface Reflectance)
+- **Spatial Resolution:** 10 Meters (Per-pixel spectral extraction)
+- **Target Region of Interest (ROI):** Coastal Mahanadi Delta, Odisha (High-density Paddy Belt)
+- **Target Crop Lifecycle:** Kharif Cycle (June to November)
+- **Spectral Indicators:** 
+    - Normalized Difference Vegetation Index (NDVI) for chlorophyll/biomass absorption tracking.
+    - Normalized Difference Water Index (NDWI) for plant canopy moisture and water-logging tracking.
+
+---
+
+## 📂 Orbital Project Directory Structure
+
+```text
+Crop-Health-Monitor-Odisha/
+├── data/
+│   ├── vectors/              # Input GeoJSON/KML spatial boundaries of target fields
+│   └── rasters_tabular/      # Temporal radiometric CSV datasets extracted from orbit
+├── notebooks/
+│   ├── 01_paddy_anomaly_simulation.ipynb   # Statistical Engine Proof-of-Concept [COMPLETED]
+│   ├── 02_real_gee_data_eda.ipynb          # Real-world Phenology Mapping [IN PROGRESS]
+│   └── 03_lstm_crop_stress_predictor.ipynb # Deep Learning Sequence Model [PLANNED]
+├── src/
+│   └── gee_extract_ndvi.js   # Production JavaScript executed on Google Earth Engine
+├── outputs/
+│   ├── figures/              # Analytical charts, anomaly scatter plots, and graphs
+│   └── alerts/               # Automated JSON stress payloads for downstream applications
+└── README.md
 ## 🏗️ System Architecture & Mission Pipeline
 
