@@ -55,9 +55,9 @@ The operational telemetry moves sequentially from orbital collection to cloud in
 
 ---
 
-## 📂 Orbital Project Directory Structure
+<h2>📂 Orbital Project Directory Structure</h2>
 
-```text
+<pre>
 Crop-Health-Monitor-Odisha/
 ├── data/
 │   ├── vectors/              # Input GeoJSON/KML spatial boundaries of target fields
@@ -72,36 +72,59 @@ Crop-Health-Monitor-Odisha/
 │   ├── figures/              # Analytical charts, anomaly scatter plots, and graphs
 │   └── alerts/               # Automated JSON stress payloads for downstream applications
 └── README.md
+</pre>
 
----
+<hr>
 
-## ⚙️ Mathematical Engine & Detection Criteria
+<h2>⚙️ Mathematical Engine & Detection Criteria</h2>
 
-The statistical framework tracks the dynamic shifts of the seasonal paddy curve. To separate true vegetative degradation from random sensor noise, the critical threshold for triggering a **Downstream Crop Stress Alert** is defined as:
+<p>The statistical framework tracks the dynamic shifts of the seasonal paddy curve. To separate true vegetative degradation from random sensor noise, the critical threshold for triggering a <strong>Downstream Crop Stress Alert</strong> is defined as:</p>
 
 $$NDVI_{t, \text{current}} < \mu_{t, \text{baseline}} - 2\sigma$$
 
-Where:
-* **$NDVI_{t, \text{current}}$**: The current season's recorded value at Julian day $t$.
-* **$\mu_{t, \text{baseline}}$**: The calculated multi-year historical median profile at Julian day $t$.
-* **$\sigma$**: The system-wide natural environmental variance factor (calibrated at $0.04$ NDVI units).
+<p><strong>Where:</strong></p>
+<ul>
+  <li><strong>$NDVI_{t, \text{current}}$</strong>: The current season's recorded value at Julian day $t$.</li>
+  <li><strong>$\mu_{t, \text{baseline}}$</strong>: The calculated multi-year historical median profile at Julian day $t$.</li>
+  <li><strong>$\sigma$</strong>: The system-wide natural environmental variance factor (calibrated at 0.04 NDVI units).</li>
+</ul>
 
-> 🛡️ **Persistent Breach Filter:** To completely eliminate false positives caused by temporary atmospheric scattering or cloud remnants, an alert is **only** escalated if the threshold is breached for **2 consecutive orbital passes (10–15 days window)**.
+<blockquote>
+  🛡️ <strong>Persistent Breach Filter:</strong> To completely eliminate false positives caused by temporary atmospheric scattering or cloud remnants, an alert is <strong>only</strong> escalated if the threshold is breached for <strong>2 consecutive orbital passes (10–15 days window)</strong>.
+</blockquote>
 
----
+<hr>
 
-## 🛠️ Mission Deployment Instructions
+<h2>🛠️ Mission Deployment Instructions</h2>
 
-Follow these chronological steps to execute the full pipeline:
+<p>Follow these chronological steps to execute the full pipeline:</p>
 
-### 🛰️ Step 1: Telemetry Ingestion
-1. Copy the entire production script from `src/gee_extract_ndvi.js`.
-2. Paste and execute it within the [Google Earth Engine Code Editor](https://code.earthengine.google.com/).
-3. Navigate to the **Tasks** tab on the right panel and click `Run` on both tasks to export your farm vector GeoJSON and the historical NDVI time-series CSV to your Google Drive.
+<h3>🛰️ Step 1: Telemetry Ingestion</h3>
+<ol>
+  <li>Copy the entire production script from <code>src/gee_extract_ndvi.js</code>.</li>
+  <li>Paste and execute it within the <a href="https://code.earthengine.google.com/" target="_blank">Google Earth Engine Code Editor</a>.</li>
+  <li>Navigate to the <strong>Tasks</strong> tab on the right panel and click <code>Run</code> on both tasks to export your farm vector GeoJSON and the historical NDVI time-series CSV to your Google Drive.</li>
+</ol>
 
-### 🧪 Step 2: Run Simulation Testing
-1. Mount your Google Drive inside your Jupyter/Colab environment.
-2. Execute the notebook `notebooks/01_paddy_anomaly_simulation.ipynb`.
-3. This will process the mathematical engine, test the $2\sigma$ filter against simulated pest shocks and flash-flood events, and automatically save the analytics plot inside `outputs/figures/`.
+<h3>🧪 Step 2: Run Simulation Testing</h3>
+<ol>
+  <li>Mount your Google Drive inside your Jupyter/Colab environment.</li>
+  <li>Execute the notebook <code>notebooks/01_paddy_anomaly_simulation.ipynb</code>.</li>
+  <li>This will process the mathematical engine, test the $2\sigma$ filter against simulated pest shocks and flash-flood events, and automatically save the analytics plot inside <code>outputs/figures/</code>.</li>
+</ol>
 
+<hr>
 
+<h2>🔒 Copyright & License</h2>
+
+<p>🛡️ <strong>Designed and Maintained by [Tera Naam]</strong> 🚀 <em>Remote Sensing & Core Pipeline Architecture</em></p>
+
+<img src="https://img.shields.io/badge/Security-Protected--Data-red?style=flat-square&logo=gitbook&logoColor=white" alt="Build Status">
+<img src="https://img.shields.io/badge/Verified%20Architect-Enterprise%20Grade-0052CC?style=flat-square&logo=github&logoColor=white" alt="Developer Verification">
+
+<br><br>
+
+<pre>
+Copyright © 2026 [Tera Naam]. All rights reserved.
+This system framework, architectural layout, and associated code blocks are protected under production-grade development standards. Unauthorized duplication or distribution without proper attribution is strictly governed under intellectual repository controls.
+</pre>
