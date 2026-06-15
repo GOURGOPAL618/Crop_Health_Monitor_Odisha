@@ -45,25 +45,7 @@ The system is engineered as a modular, 4-stage data processing and analytics pip
                                                                 │
                                                                 ▼
 🚨 Downstream Alert Payload <── [Persistent Filter] <── 🤖 Anomaly Engine (μ ± 2σ)
-
+---
 ---
 
-## 📂 Orbital Project Directory Structure
-
-```text
-Crop-Health-Monitor-Odisha/
-├── data/
-│   ├── vectors/              # Input GeoJSON/KML spatial boundaries of target fields
-│   └── rasters_tabular/      # Temporal radiometric CSV datasets extracted from orbit
-├── notebooks/
-│   ├── 01_paddy_anomaly_simulation.ipynb   # Statistical Engine Proof-of-Concept [COMPLETED]
-│   ├── 02_real_gee_data_eda.ipynb          # Real-world Phenology Mapping [IN PROGRESS]
-│   └── 03_lstm_crop_stress_predictor.ipynb # Deep Learning Sequence Model [PLANNED]
-├── src/
-│   └── gee_extract_ndvi.js   # Production JavaScript executed on Google Earth Engine
-├── outputs/
-│   ├── figures/              # Analytical charts, anomaly scatter plots, and graphs
-│   └── alerts/               # Automated JSON stress payloads for downstream applications
-└── README.md
-
-
+ 
