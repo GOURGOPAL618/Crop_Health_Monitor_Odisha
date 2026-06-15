@@ -26,7 +26,10 @@ In large-scale agricultural risk management (such as solutions deployed by SatSu
 By analyzing high-frequency temporal spectral signatures, the system intercepts hidden agronomic stress vectors (droughts, pest outbreaks, or flash floods) up to **3-4 weeks before physical degradation becomes visible to the naked eye**.
 
 ---
+
 ## 🏗️ System Architecture & Mission Pipeline
+
+```text
 [🛰️ ESA Sentinel-2 Constellation]
 │
 ▼
@@ -43,8 +46,6 @@ By analyzing high-frequency temporal spectral signatures, the system intercepts 
 │
 ▼
 [🚨 Downstream Alert Payload: Automated Risk Mitigation Report]
-
-text
 
 ---
 
