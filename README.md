@@ -39,6 +39,8 @@ The system is engineered as a modular, 4-stage data processing and analytics pip
 | **04** | **Predictive Deep Learning** | `TensorFlow / LSTM` | Training sequence models on historical baseline profiles to score anomalies via Prediction Error (MSE). | **🟡 Planned** |
 | **05** | **Downstream Alerting** | `Automated Payload` | Evaluating a 15-day Persistent Breach Filter to generate automated risk JSON payloads for insurers. | **🟡 Planned** |
 
+---
+
 ### 🔄 Data & Logic Flow Schematic
 ```text
 🛰️ Sentinel-2 Constellation ──> [Cloud-Masking Layer] ──> 📊 NDVI/NDWI Extraction
