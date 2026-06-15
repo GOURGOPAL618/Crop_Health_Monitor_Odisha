@@ -27,6 +27,26 @@ By analyzing high-frequency temporal spectral signatures, the system intercepts 
 
 ---
 
+## 🏗️ Spaceborne Architecture & End-to-End Mission Pipeline
+
+The system is engineered as a modular, 4-stage data processing and analytics pipeline, moving data seamlessly from orbital sensors to downstream risk alerts.
+
+| Stage | Mission Phase | Core Technology | Operational Objective | Status |
+| :---: | :--- | :--- | :--- | :---: |
+| **01** | **Telemetry Ingestion** | `Google Earth Engine` | Querying Copernicus Sentinel-2 Level-2A assets with strict `QA60` cloud/cirrus bitmasking. | **🟢 Active** |
+| **02** | **Feature Engineering** | `Radiometric Calculus` | Transforming raw Red ($B4$) and NIR ($B8$) bands into daily continuous NDVI time-series matrix. | **🟢 Active** |
+| **03** | **Statistical Edge Processing** | `Python / NumPy` | Executing dynamic $\mu \pm 2\sigma$ baseline thresholding to separate sensor noise from true crop stress. | **🟢 Active** |
+| **04** | **Predictive Deep Learning** | `TensorFlow / LSTM` | Training sequence models on historical baseline profiles to score anomalies via Prediction Error (MSE). | **🟡 Planned** |
+| **05** | **Downstream Alerting** | `Automated Payload` | Evaluating a 15-day Persistent Breach Filter to generate automated risk JSON payloads for insurers. | **🟡 Planned** |
+
+### 🔄 Data & Logic Flow Schematic
+```text
+🛰️ Sentinel-2 Constellation ──> [Cloud-Masking Layer] ──> 📊 NDVI/NDWI Extraction
+                                                                │
+                                                                ▼
+🚨 Downstream Alert Payload <── [Persistent Filter] <── 🤖 Anomaly Engine (μ ± 2σ)
+
+---
 
 ## 📂 Orbital Project Directory Structure
 
