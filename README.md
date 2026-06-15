@@ -125,6 +125,6 @@ $$NDVI_{t, \text{current}} < \mu_{t, \text{baseline}} - 2\sigma$$
 <br><br>
 
 <pre>
-Copyright © 2026 [Tera Naam]. All rights reserved.
+Copyright © 2026 GOURGOPAL MOHAPATRA. All rights reserved.
 This system framework, architectural layout, and associated code blocks are protected under production-grade development standards. Unauthorized duplication or distribution without proper attribution is strictly governed under intellectual repository controls.
 </pre>
