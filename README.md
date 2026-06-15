@@ -41,12 +41,17 @@ The system is engineered as a modular, 4-stage data processing and analytics pip
 
 ---
 
-### 🔄 Data & Logic Flow Schematic
-```text
-🛰️ Sentinel-2 Constellation ──> [Cloud-Masking Layer] ──> 📊 NDVI/NDWI Extraction
-                                                                │
-                                                                ▼
-🚨 Downstream Alert Payload <── [Persistent Filter] <── 🤖 Anomaly Engine (μ ± 2σ)
+## 🏗️ System Architecture & Data Flow
+
+The operational telemetry moves sequentially from orbital collection to cloud ingestion and automated alerting.
+
+| Execution Order | Phase & Data Stage | Operational Process |
+| :---: | :--- | :--- |
+| **Step 1** | 🛰️ Sentinel-2 Data Ingestion | Querying Level-2A assets with strict `QA60` cloud bitmasking. |
+| **Step 2** | 📊 Radiometric Indexing | Extracting daily continuous NDVI time-series matrix from Red & NIR bands. |
+| **Step 3** | 🤖 Anomaly Processing ($\mu \pm 2\sigma$) | Executing dynamic baseline thresholding to flag true crop stress events. |
+| **Step 4** | 🛡️ Persistent Filtering | Screening out single-pass scattering noise over a 15-day moving window. |
+| **Step 5** | 🚨 Downstream Alert Delivery | Generating automated JSON risk payloads for agricultural underwriters. |
 
 ---
 
@@ -70,4 +75,33 @@ Crop-Health-Monitor-Odisha/
 
 ---
 
- 
+## ⚙️ Mathematical Engine & Detection Criteria
+
+The statistical framework tracks the dynamic shifts of the seasonal paddy curve. To separate true vegetative degradation from random sensor noise, the critical threshold for triggering a **Downstream Crop Stress Alert** is defined as:
+
+$$NDVI_{t, \text{current}} < \mu_{t, \text{baseline}} - 2\sigma$$
+
+Where:
+* **$NDVI_{t, \text{current}}$**: The current season's recorded value at Julian day $t$.
+* **$\mu_{t, \text{baseline}}$**: The calculated multi-year historical median profile at Julian day $t$.
+* **$\sigma$**: The system-wide natural environmental variance factor (calibrated at $0.04$ NDVI units).
+
+> 🛡️ **Persistent Breach Filter:** To completely eliminate false positives caused by temporary atmospheric scattering or cloud remnants, an alert is **only** escalated if the threshold is breached for **2 consecutive orbital passes (10–15 days window)**.
+
+---
+
+## 🛠️ Mission Deployment Instructions
+
+Follow these chronological steps to execute the full pipeline:
+
+### 🛰️ Step 1: Telemetry Ingestion
+1. Copy the entire production script from `src/gee_extract_ndvi.js`.
+2. Paste and execute it within the [Google Earth Engine Code Editor](https://code.earthengine.google.com/).
+3. Navigate to the **Tasks** tab on the right panel and click `Run` on both tasks to export your farm vector GeoJSON and the historical NDVI time-series CSV to your Google Drive.
+
+### 🧪 Step 2: Run Simulation Testing
+1. Mount your Google Drive inside your Jupyter/Colab environment.
+2. Execute the notebook `notebooks/01_paddy_anomaly_simulation.ipynb`.
+3. This will process the mathematical engine, test the $2\sigma$ filter against simulated pest shocks and flash-flood events, and automatically save the analytics plot inside `outputs/figures/`.
+
+
