@@ -1,0 +1,10 @@
+{
+    "alert_id": "ALERT_ODISHA_PADDY_2026_09",
+    "timestamp_generated": "2026-06-16 08:23:34",
+    "target_field_id": "Field_1",
+    "anomaly_type": "Severe Vegetative Stress / Potential Submergence",
+    "severity_score": 0.45,
+    "historical_baseline_predicted_ndvi": 0.5485,
+    "actual_satellite_observed_ndvi": 0.0985,
+    "system_escalation_status": "CRITICAL_ACTION_REQUIRED"
+}
