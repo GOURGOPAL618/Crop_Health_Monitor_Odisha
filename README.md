@@ -166,20 +166,36 @@ $$NDVI_{t, \text{current}} < \mu_{t, \text{baseline}} - 2\sigma$$
   <li>This will process the mathematical engine, test the $2\sigma$ filter against simulated pest shocks and flash-flood events, and automatically save the analytics plot inside <code>outputs/figures/</code>.</li>
 </ol>
 
-<hr>
+<hr>## 🔒 System Security, Copyright & Space-Data License
 
-<h2>🔒 Copyright & License</h2>
+<p align="left">
+  <strong>🛰️ Chief Mission & Pipeline Architect:</strong><br>
+  <code>GOURAGOPAL MOHAPATRA</code> 🚀 — <em>Lead Deep Learning & Earth Observation Systems Engineer</em>
+</p>
 
-<p>🛡️ <strong>Designed and Maintained by GOURAGOPAL MOHAPATRA</strong> 🚀 <em>Remote Sensing & Core Pipeline Architecture</em></p>
+[![Mission Profile](https://img.shields.io/badge/ORBITAL__MISSION-RS--SDA-blueviolet?style=for-the-badge&logo=nasa&logoColor=white)](#)
+[![Telemetry Stream](https://img.shields.io/badge/TELEMETRY-SENTINEL__2__L2A-0052CC?style=for-the-badge&logo=esphome&logoColor=white)](#)
+[![Data Pipeline](https://img.shields.io/badge/SPATIAL__CORE-EARTH__ENGINE-darkgreen?style=for-the-badge&logo=googleearth&logoColor=white)](#)
+<br>
+[![System Architecture](https://img.shields.io/badge/ARCHITECTURE-ENTERPRISE__GRADE-red?style=flat-square&logo=gitbook&logoColor=white)](#)
+[![License: MIT](https://img.shields.io/badge/LICENSE-MIT__CORE-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![Operational State](https://img.shields.io/badge/PIPELINE-NOMINAL__LOOP-brightgreen?style=flat-square)](#)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
-[![Copyright](https://img.shields.io/badge/Copyright%20%C2%A9-2026-blue?style=flat-square)](#)
-[![Open Source Love](https://img.shields.io/badge/Open%20Source-%E2%9D%A4-red?style=flat-square)](#)
-[![Contributions](https://img.shields.io/badge/Contributions-Welcome-brightgreen?style=flat-square)](https://github.com/)
+<br>
 
-<br><br>
+```config
+=======================================================================================
+🏛️ CORE ARCHITECTURAL REGISTRATION | DEPLOYMENT MATRIX ID: MISSION_RS_SDA_2026
+=======================================================================================
+[OWNER]      : GOURAGOPAL MOHAPATRA (Remote Sensing Data Scientist & Systems Architect)
+[COPYRIGHT]  : © 2026 GOURAGOPAL MOHAPATRA. All Rights Reserved.
+[VALIDATION] : Production-Grade Inversion Pipeline & Telemetry Verification Engine
+=======================================================================================
 
-<pre>
-Copyright © 2026 GOURGOPAL MOHAPATRA. All rights reserved.
-This system framework, architectural layout, and associated code blocks are protected under production-grade development standards. Unauthorized duplication or distribution without proper attribution is strictly governed under intellectual repository controls.
+NOTICE: This algorithmic matrix, temporal deep learning topology (Stacked LSTM), and 
+associated signal processing layers (Savitzky-Golay) are registered assets. 
+Unauthorized distribution, modification, or commercial ingestion without explicit 
+cryptographic verification from the Lead Architect is strictly prohibited under 
+operational data safety compliance.
+distribution without proper attribution is strictly governed under intellectual repository controls.
 </pre>
