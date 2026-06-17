@@ -1,5 +1,5 @@
 # =======================================================================================
-# 📡 MISSION_RS_SDA: EDGE COMPLIANCE & TELEMETRY DEPENDENCY MANIFEST
+# 📡 MISSION_RS_SDA: EDGE COMPLIANCE & TELEMETRY DEPENDENCY MANIFEST 
 # =======================================================================================
 # Target Enclave: Ubuntu 22.04 LTS / Debian GNU Core x86_64
 # Minimum Compute Matrix: 4x vCPU Nodes | 16GB System RAM | CUDA Compute Capability 8.6+
