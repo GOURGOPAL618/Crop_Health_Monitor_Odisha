@@ -170,10 +170,12 @@ $$NDVI_{t, \text{current}} < \mu_{t, \text{baseline}} - 2\sigma$$
 
 <h2>🔒 Copyright & License</h2>
 
-<p>🛡️ <strong>Designed and Maintained by [Tera Naam]</strong> 🚀 <em>Remote Sensing & Core Pipeline Architecture</em></p>
+<p>🛡️ <strong>Designed and Maintained by GOURAGOPAL MOHAPATRA</strong> 🚀 <em>Remote Sensing & Core Pipeline Architecture</em></p>
 
-<img src="https://img.shields.io/badge/Security-Protected--Data-red?style=flat-square&logo=gitbook&logoColor=white" alt="Build Status">
-<img src="https://img.shields.io/badge/Verified%20Architect-Enterprise%20Grade-0052CC?style=flat-square&logo=github&logoColor=white" alt="Developer Verification">
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![Copyright](https://img.shields.io/badge/Copyright%20%C2%A9-2026-blue?style=flat-square)](#)
+[![Open Source Love](https://img.shields.io/badge/Open%20Source-%E2%9D%A4-red?style=flat-square)](#)
+[![Contributions](https://img.shields.io/badge/Contributions-Welcome-brightgreen?style=flat-square)](https://github.com/)
 
 <br><br>
 
