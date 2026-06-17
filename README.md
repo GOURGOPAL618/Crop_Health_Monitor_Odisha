@@ -167,6 +167,8 @@ $$NDVI_{t, \text{current}} < \mu_{t, \text{baseline}} - 2\sigma$$
 </ol>
 
 <hr> 
+---
+
 ##🔒 System Security, Copyright & Space-Data License
 
 <p align="left">
@@ -198,5 +200,7 @@ associated signal processing layers (Savitzky-Golay) are registered assets.
 Unauthorized distribution, modification, or commercial ingestion without explicit 
 cryptographic verification from the Lead Architect is strictly prohibited under 
 operational data safety compliance.
+
+---
 distribution without proper attribution is strictly governed under intellectual repository controls.
 </pre>
