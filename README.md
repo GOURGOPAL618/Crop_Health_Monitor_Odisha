@@ -1,6 +1,7 @@
-# 🛰️ CORONA-Paddy: Spaceborne Time-Series Crop Vigor & Early Warning System
-
 <div align="center">
+
+# 🛰️ MISSION: CROP HEALTH MONITOR & ANOMALY DETECTION SYSTEM
+### `ODISHA PADDY SURVEILLANCE NETWORK` | Autonomous Vegetative Stress Interception Engine
 
 ![Satellite Radar](https://img.shields.io/badge/Spaceborne%20Telemetry-Active-success?style=for-the-badge&logo=nasa&logoColor=white&color=0B3D91)
 ![Orbit](https://img.shields.io/badge/Constellation-Sentinel--2%20%26%20Landsat-blue?style=for-the-badge&logo=esa&logoColor=white&color=0032A0)
@@ -11,6 +12,8 @@
 ![Radar/Optics](https://img.shields.io/badge/Data%20Type-Multispectral%20Radiometry-purple?style=flat-square)
 ![Location](https://img.shields.io/badge/Target%20ROI-Odisha%20Delta%20Region-critical?style=flat-square&logo=google-maps&logoColor=white)
 ![License](https://img.shields.io/badge/Security-Production%20Grade-success?style=flat-square)
+
+**`SYSTEM CLASS:`** Remote Sensing Time-Series Intelligence &nbsp;|&nbsp; **`PAYLOAD:`** NDVI Spectral Index &nbsp;|&nbsp; **`OPS REGION:`** Odisha, India
 
 <p align="center">
   <strong>An advanced remote sensing pipeline designed for real-time tracking of Kharif Paddy Phenology and preemptive anomaly detection using multi-spectral time-series baselines.</strong>
@@ -36,8 +39,8 @@ The system is engineered as a modular, 4-stage data processing and analytics pip
 | **01** | **Telemetry Ingestion** | `Google Earth Engine` | Querying Copernicus Sentinel-2 Level-2A assets with strict `QA60` cloud/cirrus bitmasking. | **🟢 Active** |
 | **02** | **Feature Engineering** | `Radiometric Calculus` | Transforming raw Red ($B4$) and NIR ($B8$) bands into daily continuous NDVI time-series matrix. | **🟢 Active** |
 | **03** | **Statistical Edge Processing** | `Python / NumPy` | Executing dynamic $\mu \pm 2\sigma$ baseline thresholding to separate sensor noise from true crop stress. | **🟢 Active** |
-| **04** | **Predictive Deep Learning** | `TensorFlow / LSTM` | Training sequence models on historical baseline profiles to score anomalies via Prediction Error (MSE). | **🟡 Planned** |
-| **05** | **Downstream Alerting** | `Automated Payload` | Evaluating a 15-day Persistent Breach Filter to generate automated risk JSON payloads for insurers. | **🟡 Planned** |
+| **04** | **Predictive Deep Learning** | `TensorFlow / LSTM` | Training sequence models on historical baseline profiles to score anomalies via Prediction Error (MSE). | **🟢 Active** |
+| **05** | **Downstream Alerting** | `Automated Payload` | Evaluating a 15-day Persistent Breach Filter to generate automated risk JSON payloads for insurers. | **🟢 Active** |
 
 ---
 
@@ -54,6 +57,56 @@ The operational telemetry moves sequentially from orbital collection to cloud in
 | **Step 5** | 🚨 Downstream Alert Delivery | Generating automated JSON risk payloads for agricultural underwriters. |
 
 ---
+
+## 🔔 AUTOMATED ALERT TELEMETRY — SAMPLE PAYLOAD
+
+When the system intercepts a critical vegetative shock event (e.g., flash-flood submergence signature), it auto-generates and dumps the following standardized JSON telemetry packet:
+
+```json
+{
+    "alert_id": "ALERT_ODISHA_PADDY_2026_09",
+    "timestamp_generated": "2026-06-17 19:40:22",
+    "target_field_id": "Field_1",
+    "anomaly_type": "Severe Vegetative Stress / Potential Submergence",
+    "severity_score": 0.4952,
+    "historical_baseline_predicted_ndvi": 0.5452,
+    "actual_satellite_observed_ndvi": 0.05,
+    "system_escalation_status": "CRITICAL_ACTION_REQUIRED"
+}
+```
+
+**🚨 Escalation Logic:** `|Predicted_NDVI − Observed_NDVI| > 2σ` → trigger `CRITICAL_ACTION_REQUIRED` flag → dump alert packet to `outputs/alerts/`
+
+---
+
+## 🛠️ TECHNICAL STACK
+
+<div align="center">
+
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
+![Keras](https://img.shields.io/badge/Keras-D00000?style=flat-square&logo=keras&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
+![GEE](https://img.shields.io/badge/Google%20Earth%20Engine-4285F4?style=flat-square&logo=googleearth&logoColor=white)
+
+</div>
+
+| Component | Technology |
+|:----------|:-----------|
+| Language | Python |
+| Deep Learning Core | TensorFlow / Keras |
+| Numerical Computing | NumPy |
+| Preprocessing & Scaling | Scikit-Learn, Joblib |
+| Signal Filtering | SciPy (Savitzky-Golay) |
+| Visualization | Matplotlib |
+| Data Source | Google Earth Engine — Sentinel-2 MSI |
+
+---
+
+### 🌾 STATUS: GROUND STATION ACTIVE — MONITORING ODISHA PADDY SECTOR
+
+*Built for early-warning agricultural resilience — because every σ of deviation matters.*
 
 <h2>📂 Orbital Project Directory Structure</h2>
 
