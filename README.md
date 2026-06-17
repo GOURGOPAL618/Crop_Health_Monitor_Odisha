@@ -166,10 +166,7 @@ $$NDVI_{t, \text{current}} < \mu_{t, \text{baseline}} - 2\sigma$$
   <li>This will process the mathematical engine, test the $2\sigma$ filter against simulated pest shocks and flash-flood events, and automatically save the analytics plot inside <code>outputs/figures/</code>.</li>
 </ol>
 
-<hr> 
----
-
-##🔒 System Security, Copyright & Space-Data License
+<hr>🔒 System Security, Copyright & Space-Data License
 
 <p align="left">
   <strong>🛰️ Chief Mission & Pipeline Architect:</strong><br>
@@ -201,6 +198,5 @@ Unauthorized distribution, modification, or commercial ingestion without explici
 cryptographic verification from the Lead Architect is strictly prohibited under 
 operational data safety compliance.
 
----
 distribution without proper attribution is strictly governed under intellectual repository controls.
 </pre>
