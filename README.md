@@ -166,7 +166,7 @@ $$NDVI_{t, \text{current}} < \mu_{t, \text{baseline}} - 2\sigma$$
   <li>This will process the mathematical engine, test the $2\sigma$ filter against simulated pest shocks and flash-flood events, and automatically save the analytics plot inside <code>outputs/figures/</code>.</li>
 </ol>
 
-<hr>## 🔒 System Security, Copyright & Space-Data License
+<hr> 🔒 System Security, Copyright & Space-Data License
 
 <p align="left">
   <strong>🛰️ Chief Mission & Pipeline Architect:</strong><br>
