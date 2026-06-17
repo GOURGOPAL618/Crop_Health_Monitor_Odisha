@@ -1,0 +1,66 @@
+# =======================================================================================
+# 🔒 MISSION_RS_SDA: EDGE GATEKEEPER & DEPLOYMENT .GITIGNORE MATRIX
+# =======================================================================================
+# Target Guard: Block runtime artifacts while forcing operational model persistence.
+# =======================================================================================
+
+# 🚫 STEP 1: BLOCK ALL STANDALONE COMPILED BINARIES AND OBJECTS GENERAL RULES
+*.keras
+*.pkl
+*.h5
+*.pickle
+*.pyc
+
+# 🚀 STEP 2: CRITICAL ARCHITECT OVERRIDE - FORCE WHITELIST TRAINED MODEL ASSETS
+# Do NOT touch or block GOURAGOPAL's core production models
+!**/models/lstm_crop_anomaly_engine.keras
+!**/models/robust_minmax_scaler.pkl
+
+# 🚫 STEP 3: PYTHON RUNTIME & ENVIRONMENT CACHE DESTRUCTION
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# 🚫 STEP 4: VIRTUAL ENVIRONMENTS DISCOVERY BLOCK
+venv/
+.venv/
+ENV/
+env/
+target/
+
+# 🚫 STEP 5: IDE CONFIGURATIONS & JUPYTER RUNTIME GARBAGE
+.ipynb_checkpoints/
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# 🚫 STEP 6: LOCAL OS ARTIFACTS
+.DS_Store
+Thumbs.db
+
+# =======================================================================================
+# ⚙️ SYSTEMS DEPLOYMENT FLAG OVERRIDE:
+# Forced core assets bypass local filter rule barriers seamlessly.
+# =======================================================================================
