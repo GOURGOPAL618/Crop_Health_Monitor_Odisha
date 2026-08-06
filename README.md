@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🛰️ MISSION: CROP HEALTH MONITOR & ANOMALY DETECTION SYSTEM
+### 🛰️ MISSION: CROP HEALTH MONITOR & ANOMALY DETECTION SYSTEM
 ### `ODISHA PADDY SURVEILLANCE NETWORK` | Autonomous Vegetative Stress Interception Engine
 
 ![Satellite Radar](https://img.shields.io/badge/Spaceborne%20Telemetry-Active-success?style=for-the-badge&logo=nasa&logoColor=white&color=0B3D91)
