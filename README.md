@@ -19,7 +19,6 @@
 
 <br>
 
-
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)
 ![Security](https://img.shields.io/badge/Security-Production%20Grade-success?style=flat-square)
 
