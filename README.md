@@ -19,10 +19,7 @@
 
 <br>
 
-![Repo Size](https://img.shields.io/github/repo-size/GOURGOPAL618/Crop-Health-Monitor-Odisha?style=flat-square&color=informational)
-![Last Commit](https://img.shields.io/github/last-commit/GOURGOPAL618/Crop-Health-Monitor-Odisha?style=flat-square&color=blueviolet)
-![Issues](https://img.shields.io/github/issues/GOURGOPAL618/Crop-Health-Monitor-Odisha?style=flat-square&color=yellow)
-![Stars](https://img.shields.io/github/stars/GOURGOPAL618/Crop-Health-Monitor-Odisha?style=flat-square&color=gold)
+
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)
 ![Security](https://img.shields.io/badge/Security-Production%20Grade-success?style=flat-square)
 
